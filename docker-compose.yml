@@ -9,6 +9,9 @@ services:
       - .:/app
     depends_on:
       - db
+    environment:
+      DATABASE_URL: postgres://postgres:admin@db:5433/micro
+    
   db:
     image: postgres:16
     environment:
@@ -19,3 +22,6 @@ services:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data 
+
+volumes:
+  postgres_data:
