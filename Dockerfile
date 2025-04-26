@@ -12,4 +12,4 @@ COPY . /app
 
 RUN chmod +x /app/entrypoint.sh
 
-CMD ["./entrypoint.sh"]
+CMD ["sh", "/app/entrypoint.sh"]
