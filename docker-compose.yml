@@ -10,7 +10,7 @@ services:
     depends_on:
       - db
     environment:
-      DATABASE_URL: postgres://postgres:admin@db:5433/micro
+      DATABASE_URL: postgres://postgres:admin@db:5432/micro
     
   db:
     image: postgres:16
