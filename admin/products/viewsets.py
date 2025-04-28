@@ -1,7 +1,7 @@
 from rest_framework import viewsets
 from .serializers import ProductSerializer
 from .models import Product
-from producer import publish
+from .producer import publish
 
 class ProductViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.all()
